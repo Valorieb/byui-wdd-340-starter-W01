@@ -1,0 +1,39 @@
+@media (min-width: 1024px) {
+  
+  body {
+    width: 1200px;
+  }
+  figure{
+    width: 200px;
+    padding:10px;
+    text-align: center;
+    margin: 10px 30px;
+  }
+  .features{
+    width:200px;
+    left:50px;
+    padding: 10px;
+    font-size:medium;
+  }
+  .features ul{
+    
+    text-align: center;
+    padding:10px;
+  }
+  .figures-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero{
+    height: 300px
+  }
+  .delorean-img {
+    left:180px;
+  }
+  .bottom-container{
+    display:flex;
+    gap: 10px;
+    
+  }
+}

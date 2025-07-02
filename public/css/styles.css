@@ -4,3 +4,135 @@
 *:after {
   box-sizing: border-box;
 }
+
+html {
+  background-image: url("/images/site/small_check.jpg");
+}
+
+body {
+  background-color: white;
+  border: 5px turquoise solid;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  display: block;
+  margin: 0 auto; 
+}
+
+figure{
+  background-color: rgb(136, 254, 254);
+  width: 100px;
+  text-align: center;
+  margin:7px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  color: whitesmoke;
+  padding: 5px;
+}
+
+nav li {
+  padding: 5px;
+}
+
+.bottom-container{
+  display:block;
+  padding:10px;  
+}
+
+.figures-container{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.upgrades, .reviews{
+  padding:10px;
+  text-align: center;
+  flex:1;
+}
+
+.reviews li{
+  list-style-type: none;
+}
+
+.reviews ul{
+  padding-left: 0;
+  margin:0;
+}
+
+.features {
+  background-color: rgb(210, 253, 253, 0.6);
+  border-radius: 10px;
+  width: 150px;
+  height: auto;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  font-size: small;
+  
+}
+.features h2{
+  text-align: center;
+}
+
+.features ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin:0;
+}
+
+.features button {
+  background-color: rgb(5, 100, 100);
+  color: white;
+  padding: 10px;
+  height: 45px;
+  width:auto;
+  border-radius: 10px;
+  display:block;
+  margin: 0 auto;
+
+}
+
+.hero{
+  position: relative;
+  height: 150px
+}
+
+
+.delorean-img {
+  position:absolute;
+  left:80px;
+}
+
+.siteName a {
+  text-decoration: none;
+  font-size: x-large;
+  color: black;
+  padding: 5px;
+}
+
+.siteName a:visited {
+  color: black;
+}
+
+#tools a {
+  margin-left: auto;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+#tools a:visited {
+  color: black;
+}
+

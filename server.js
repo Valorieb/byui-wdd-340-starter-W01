@@ -10,6 +10,8 @@ const expressLayouts = require("express-ejs-layouts");
 const env = require("dotenv").config();
 const app = express();
 const static = require("./routes/static");
+const livereload = require("livereload");
+const connectLivereload = require("connect-livereload");
 
 /* ***********************
  * View Engine Templates
@@ -17,6 +19,21 @@ const static = require("./routes/static");
 app.set("view engine", "ejs");
 app.use(expressLayouts);
 app.set("layout", "./layouts/layout"); // not at views root
+
+/* ***********************
+ * Livereload
+ *************************/
+const liveReloadServer = livereload.createServer();
+liveReloadServer.watch(__dirname + "/public"); // or wherever your HTML/CSS is
+
+liveReloadServer.server.once("connection", () => {
+  setTimeout(() => {
+    liveReloadServer.refresh("/");
+  }, 100);
+});
+
+app.use(connectLivereload());
+
 
 /* ***********************
  * Routes
