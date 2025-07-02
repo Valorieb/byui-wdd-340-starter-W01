@@ -7,6 +7,11 @@
 
 html {
   background-image: url("/images/site/small_check.jpg");
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 body {
