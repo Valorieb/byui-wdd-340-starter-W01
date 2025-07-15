@@ -12,6 +12,8 @@ const app = express();
 const static = require("./routes/static");
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
+const baseController = require("./controllers/baseController");
+const inventoryRoute = require("./routes/inventoryRoute");
 
 /* ***********************
  * View Engine Templates
@@ -34,15 +36,15 @@ liveReloadServer.server.once("connection", () => {
 
 app.use(connectLivereload());
 
-
 /* ***********************
  * Routes
  *************************/
 app.use(static);
 //Index route
-app.get("/", function (req, res) {
-  res.render("index", { title: "Home" });
-});
+app.get("/", baseController.buildHome);
+
+// Inventory routes
+app.use("/inv", inventoryRoute);
 
 /* ***********************
  * Local Server Information
