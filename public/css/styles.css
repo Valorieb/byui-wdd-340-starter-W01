@@ -29,6 +29,28 @@ figure {
   margin: 7px;
 }
 
+form {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: rgb(188, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+form button {
+  width:100px;
+  padding:10px;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+form input {
+  margin: 10px;
+  padding: 10px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -46,6 +68,10 @@ nav ul {
 
 nav li {
   padding: 5px;
+}
+
+nav a:visited {
+  color: aqua;
 }
 
 .bottom-container {
