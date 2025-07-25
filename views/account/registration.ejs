@@ -10,40 +10,42 @@
   <body>
     <main>
       <h1><%= title %></h1>
-      <%- messages() %>
-              <% if (errors) { %>
-        <ul class="notice">
-          <% errors.array().forEach(error => { %>
-          <li><%= error.msg %></li>
-          <% }) %>
-        </ul>
-        <% } %>
-      <form action="/account/register" method="post">
-        <label for="fname">First Name</label><br />
+      <%- messages() %> <% if (errors) { %>
+      <ul class="notice">
+        <% errors.array().forEach(error => { %>
+        <li><%= error.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+      <form action="/account/registration" method="post">
+        <label for="accountFirstname">First Name</label><br />
         <input
-          id="fname"
+          id="accountFirstname"
           type="text"
-          name="fname"
+          name="account_firstname"
           required
           placeholder="Enter your first name"
+          value="<%= locals.account_firstname %>"
         /><br />
 
-        <label for="lname">Last Name</label><br />
+        <label for="accountLastname">Last Name</label><br />
         <input
-          id="lname"
+          id="accountLastname"
           type="text"
-          name="lname"
+          name="account_lastname"
           required
           placeholder="Enter your last name"
+          value="<%= locals.account_lastname %>"
         /><br />
 
-        <label for="email">Email</label><br />
+        <label for="accountEmail">Email</label><br />
         <input
-          id="email"
+          id="accountEmail"
           type="email"
           name="account_email"
           required
           placeholder="Enter your email"
+          value="<%= locals.account_email %>"
         /><br />
 
         <label for="password">Password</label><br />
@@ -62,7 +64,6 @@
         </div>
         <br />
         <button type="Submit">Register</button>
-
       </form>
     </main>
   </body>
